@@ -1,27 +1,11 @@
 katz_deli = []
 
 def line(placement)
-  line_array = []
-  if placement.length == 0
+  placement_array = []
+  if placement.length == 0 
     puts "The line is currently empty."
-  else
-    placement.each.with_index(1) do |name, new_index|
-      line_array.push("#{new_index}. #{name}")
-    end
-    puts "The line is currently: #{line_array.join(" ")}"
+  elsif current_line_array.each_with_index[1] do |name,new_index| 
+    placement_array.push("#{new_index}. #{name}")
   end
-end
-
-def take_a_number(katz_deli, name)
-  katz_deli.push(name)
-  puts "Welcome, #{name}. You are number #{katz_deli.length} in line."
-end
-
-def now_serving(array)
-  if array.empty?
-    puts "There is nobody waiting to be served!"
-  else
-    puts "Currently serving #{array[0]}."
-    array.shift
-  end
+  puts "The line is: #{current_line_array.join(" ")}"
 end
